@@ -1,0 +1,4 @@
+interface:
+  display_name: "Industrial Graphic Realism UI"
+  short_description: "Build precise, hard-edged operational interfaces"
+  default_prompt: "Use $industrial-graphic-realism-ui to design and implement this technical interface."
