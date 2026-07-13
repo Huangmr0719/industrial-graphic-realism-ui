@@ -31,7 +31,7 @@ Use a deliberately small material vocabulary:
 - data surface: table, log, grid, metadata strip, or fixed-width block
 - media surface: framed image, chart, code, paper, or generated artifact
 
-Use approximately 70% base neutral, 20% secondary neutral, 5-10% primary accent, plus semantic colors only when required. Pick one primary accent such as acid yellow-green, signal green, safety orange, electric blue, cold cyan, or another product-appropriate signal color.
+Use approximately 80-90% base neutral, 8-15% secondary neutral, and 3-8% total accent in dark archive or terminal compositions. Product screens with more semantic states may use a broader distribution. Pick one primary signal such as acid yellow-green, safety orange, electric blue, or cold cyan. A second accent is permitted only when it has a distinct structural job, such as chapter transition or archive indexing.
 
 Use the accent for primary action, current navigation, selected content, active process, live state, or a key metric. Do not scatter it as decoration.
 
@@ -75,6 +75,8 @@ Use typography as interface architecture:
 
 Keep display type proportional to its container. Do not use hero-scale text inside compact panels. Do not make all text uppercase. Never depend on tiny decorative text for essential information.
 
+Treat real font metrics as part of layout. Similar-looking families can have radically different width, x-height, and line box behavior. After changing fonts, recalibrate navigation gaps, headline wrapping, vertical rails, and compact labels from screenshots. Use uppercase for navigation, codes, and terse labels; keep paragraphs and long publication titles readable.
+
 ## Layout
 
 Order information by:
@@ -88,6 +90,22 @@ Order information by:
 7. atmosphere, only when it has a legitimate role
 
 Prefer hard-edged rectangular zones, strong alignment, compact metadata rails, section numbers, fixed-width data blocks, and controlled asymmetry.
+
+### Section Rail System
+
+A rail is a structural edge, not a reusable decoration. It may carry identity, state, indexing, or navigation, but its position, width, and density should respond to the chapter. One section may use a wide right identity rail, another a thin left signal line, another a year axis, and another no rail at all. Repeating the same colored sidebar across every section turns a system into a template.
+
+Let rails touch the frame when the composition calls for an edge condition. Avoid accidental inset gaps, isolated color strips, and labels whose orientation or spacing is unrelated to the rail geometry.
+
+### Identity and Archive Composition
+
+- Hero: one dominant image field, one identity event, and one concise information panel.
+- Research: one large statement plus a restrained academic trace; avoid equal-weight cards.
+- News: a paged transmission log with a small visible batch, not an endlessly widening carousel.
+- Publications: full-width archive records with code, title, author, venue, and access; avoid database headers unless sorting is real.
+- Projects: engineering artifacts with a single identity line and external destination; visuals should carry more weight than metadata.
+- Notes: fragments or transmissions with title, date, and source; never default to blog cards and summaries.
+- Footer: terminal exit and contact directory; do not repeat the biography, position, and research scope already stated above.
 
 For dashboards, keep the upper region state-oriented, place primary actions near the current state, and put logs and details below.
 
@@ -160,6 +178,8 @@ Use monospaced text, a neutral panel, timestamps, status tokens, collapsible ent
 
 Use a narrow horizontal or vertical strip for real metadata such as run ID, model, environment, status, updated time, version, or permission state.
 
+For identity archives, decorative glyphs may replace numeric IDs when the marks are clearly ornamental. Do not label abstract marks as readings or statuses.
+
 ## Interaction and Accessibility
 
 Make interactions precise:
@@ -185,6 +205,9 @@ Maintain sufficient contrast, full keyboard navigation, semantic markup, readabl
 - Let long labels wrap or truncate intentionally with an accessible full value.
 - Preserve touch target sizes even when the visual treatment is compact.
 - Avoid one-off inline styles, magic numbers, and overuse of absolute positioning.
+- For art-directed vertical compositions, size internal assets relative to their rail (`cqw`, percentages, or intrinsic aspect ratio) so barcodes and marks maintain edge contact across widths.
+- Reserve stable face-safe areas when media and overlays share a frame.
+- Use `100dvh` minus the actual header for full-screen heroes and verify that browser chrome and mobile dynamic viewports do not reveal the next section.
 
 ## Anti-Patterns
 
@@ -199,3 +222,8 @@ Reject:
 - accent color without semantic purpose
 - visual density that hides the primary action
 - direct imitation of a commercial game's or brand's identity
+- identical colored sidebars repeated on every section
+- project and note sections reduced to generic portfolio or blog cards
+- large accent rectangles used to compensate for weak hierarchy
+- portrait overlays that cover eyes, mouth, or the intended focal area
+- endless CSS calibration layers that override one another

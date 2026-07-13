@@ -27,6 +27,11 @@ Review the rendered interface, not only the source code. Record concrete failure
 - Do long text, real data, empty states, errors, and loading states fit without overlap?
 - Are dense panels calm enough to scan repeatedly?
 - Are mobile layouts intentionally recomposed rather than merely squeezed?
+- Does the opening hero fit below the header without leaking the next section?
+- Is portrait cropping intentional, with the focal face area unobstructed?
+- Do rails meet their intended frame edges without accidental gutters?
+- Are supplied SVGs, barcodes, and identity marks using the correct aspect ratio and alignment?
+- Do Projects and Notes read as chapters of the same archive rather than appended portfolio/blog templates?
 
 ## Interaction and Accessibility
 
@@ -55,6 +60,12 @@ Review the rendered interface, not only the source code. Record concrete failure
 - Verify desktop and mobile rendering visually.
 - Exercise the primary interaction and representative edge states.
 - Check the browser console and fix relevant errors or warnings.
+- Compare screenshots at wide desktop, compact desktop/tablet, and narrow mobile.
+- Check bounding boxes and computed gaps when alignment is visually ambiguous.
+- Check for horizontal overflow at every target width.
+- Confirm local fonts actually load, all referenced weights exist, and unused files are not shipped.
+- Confirm `file://`, reduced motion, keyboard navigation, and cache-busted local preview behavior when required.
+- Check that backup directories, OS metadata, screenshots, and secrets are excluded from version control.
 
 ## Final Test
 
